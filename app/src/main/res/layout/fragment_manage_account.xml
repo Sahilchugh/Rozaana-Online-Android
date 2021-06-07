@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".homeStructure.ManageAccountFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Manage Account"
+            android:textSize="@dimen/normal_text"
+            android:textColor="@color/black" />-->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/order_icon"
+                android:text="Your Orders"
+                android:textSize="@dimen/normal_text"
+                android:textColor="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/address_icon"
+                android:text="Your Addresses"
+                android:textSize="@dimen/normal_text"
+                android:textColor="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/recurring_icon"
+                android:text="Recurring Orders"
+                android:textSize="@dimen/normal_text"
+                android:textColor="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/wallet_icon"
+                android:text="Rozaana Balance"
+                android:textSize="@dimen/normal_text"
+                android:textColor="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/wallet_icon"
+                android:text="Send Money"
+                android:textSize="@dimen/normal_text"
+                android:textColor="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/password_icon"
+                android:text="Change Password"
+                android:textSize="@dimen/normal_text"
+                android:textColor="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/normal_margin"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/standard_margin"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/password_icon"
+                android:text="About Rozaana Online"
+                android:textSize="@dimen/normal_text"
+                android:textColor="@color/black" />
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

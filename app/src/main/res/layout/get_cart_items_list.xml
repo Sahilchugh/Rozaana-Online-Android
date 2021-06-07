@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+      <ImageView
+          android:id="@+id/prodImage"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:src="@mipmap/ic_launcher"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/prodName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:text="Fortune Refined Soyabean Oil Pouch (1L)"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/offPercentage"
+            app:layout_constraintStart_toEndOf="@+id/prodImage"/>
+
+        <TextView
+            android:id="@+id/offPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11% off"
+            android:textColor="@color/base_theme"
+            app:layout_constraintStart_toEndOf="@+id/prodName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/prodName" />
+
+        <TextView
+            android:id="@+id/actualPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="₹150"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/normal_margin"
+            app:layout_constraintStart_toEndOf="@+id/prodImage"
+            app:layout_constraintTop_toBottomOf="@+id/prodName"/>
+
+        <TextView
+            android:id="@+id/strikedPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹170"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/prodName"
+            app:layout_constraintStart_toEndOf="@+id/actualPrice"/>
+
+        <TextView
+            android:id="@+id/qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="@dimen/normal_margin"
+            app:layout_constraintTop_toBottomOf="@+id/actualPrice"
+            app:layout_constraintStart_toEndOf="@+id/prodImage"/>
+
+        <LinearLayout
+            android:id="@+id/linearCountLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/qty"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@+id/qty"
+            app:layout_constraintStart_toEndOf="@+id/qty">
+
+            <ImageView
+                android:id="@+id/minusImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_red_minus"
+                android:layout_marginEnd="25sp"
+                android:layout_marginStart="25dp"/>
+
+            <TextView
+                android:id="@+id/qtyCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="25sp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="1"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/plusImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_red_plus"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/removeFromBasket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:text="@string/remove_from_basket"
+            android:textColor="@color/base_theme"
+            app:layout_constraintTop_toBottomOf="@+id/qty"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/finalAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Total Amount ₹300"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            app:layout_constraintTop_toTopOf="@+id/removeFromBasket"
+            app:layout_constraintBottom_toBottomOf="@id/removeFromBasket"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

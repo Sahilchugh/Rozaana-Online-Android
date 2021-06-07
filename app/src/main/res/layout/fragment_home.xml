@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:src="@drawable/demooo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager1"
+            android:minWidth="200dp"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.tabs.TabLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.viewpager.widget.ViewPager>
+
+
+        <ImageView
+            android:id="@+id/image2"
+            android:src="@drawable/demooo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:text="Shop by category"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_height="wrap_content"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager2"
+            android:minWidth="60dp"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/image3"
+            android:src="@drawable/demooo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/extra_small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:text="Top products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/topProductsRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_height="wrap_content"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager3"
+            android:minWidth="115dp"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:text="Super Deals"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/superDealsRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/image4"
+            android:src="@drawable/demooo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/standard_margin"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"/>
+
+        <ImageView
+            android:id="@+id/image5"
+            android:src="@drawable/demooo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/extra_small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+        <ImageView
+            android:id="@+id/image6"
+            android:src="@drawable/demooo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/extra_small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"/>
+
+        <ImageView
+            android:id="@+id/image7"
+            android:src="@drawable/demooo"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/extra_small_margin"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"/>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

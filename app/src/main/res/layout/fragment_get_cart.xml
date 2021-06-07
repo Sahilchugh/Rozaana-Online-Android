@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightish_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".homeStructure.GetCartFragment">
+
+   <TextView
+       android:id="@+id/heading"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/shopping_cart"
+       android:textSize="14sp"
+       android:textColor="@color/black"
+       android:layout_marginTop="@dimen/normal_margin"
+       android:layout_marginStart="@dimen/normal_margin"
+       android:fontFamily="@font/poppins_bold"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/continueShopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="104dp"
+        android:padding="3dp"
+        android:text="Continue shopping"
+        android:textColor="@color/base_theme"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toTopOf="@id/heading"
+        app:layout_constraintBottom_toBottomOf="@id/heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rounded_textview"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="6dp"
+        android:background="@color/grey"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@+id/continueShopping"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCartOrders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        tools:listitem="@layout/get_cart_items_list"
+        app:layout_constraintBottom_toTopOf="@+id/consPriceDetails"
+        app:layout_constraintTop_toBottomOf="@+id/view1"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/consPriceDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomCardView"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewCartOrders">
+
+
+     <TextView
+         android:id="@+id/heading2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginStart="@dimen/normal_margin"
+         android:text="@string/payment_details"
+         android:textColor="@color/black"
+         android:fontFamily="@font/poppins"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"/>
+
+     <TextView
+         android:id="@+id/mrpTotalTxt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="@string/mrp_total"
+         android:textSize="10sp"
+         android:textColor="@color/black"
+         android:layout_marginTop="6dp"
+         android:layout_marginStart="@dimen/normal_margin"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/heading2"/>
+
+     <TextView
+         android:id="@+id/actualPrice"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="₹1,710"
+         android:textSize="11sp"
+         android:textColor="@color/black"
+         android:layout_marginEnd="@dimen/normal_margin"
+         app:layout_constraintTop_toTopOf="@+id/mrpTotalTxt"
+         app:layout_constraintBottom_toBottomOf="@id/mrpTotalTxt"
+         app:layout_constraintEnd_toEndOf="parent"/>
+
+     <View
+         android:id="@+id/view2"
+         android:layout_width="match_parent"
+         android:layout_height="0.5dp"
+         android:layout_marginTop="6dp"
+         android:background="@color/grey"
+         android:layout_marginStart="@dimen/normal_margin"
+         android:layout_marginEnd="@dimen/normal_margin"
+         app:layout_constraintTop_toBottomOf="@+id/actualPrice"/>
+
+     <TextView
+         android:id="@+id/totalAmountTxt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Total Amount"
+         android:layout_marginTop="6dp"
+         android:textSize="10sp"
+         android:textColor="@color/black"
+         android:layout_marginStart="@dimen/normal_margin"
+         app:layout_constraintTop_toBottomOf="@+id/view2"
+         app:layout_constraintStart_toStartOf="parent"/>
+
+     <TextView
+         android:id="@+id/actualTotalPrice"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="₹1,710"
+         android:textSize="11sp"
+         android:textColor="@color/black"
+         android:layout_marginEnd="@dimen/normal_margin"
+         app:layout_constraintTop_toTopOf="@+id/totalAmountTxt"
+         app:layout_constraintBottom_toBottomOf="@id/totalAmountTxt"
+         app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <androidx.cardview.widget.CardView
+       android:id="@+id/bottomCardView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:cardElevation="2dp"
+       app:cardUseCompatPadding="true"
+       app:cardBackgroundColor="@color/lightish_gray"
+       app:layout_constraintTop_toBottomOf="@+id/consPriceDetails"
+       app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="82dp"
+        android:background="@drawable/top_round_card">
+
+     <TextView
+         android:id="@+id/selectedItemsTxt"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Selected Items"
+         android:layout_marginTop="10dp"
+         android:fontFamily="@font/poppins"
+         android:textColor="@color/black"
+         android:layout_marginStart="@dimen/normal_margin"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintStart_toStartOf="parent"/>
+
+     <TextView
+         android:id="@+id/totalProdQty"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="(3)"
+         android:layout_marginTop="10dp"
+         android:fontFamily="@font/poppins"
+         android:textColor="@color/black"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintStart_toEndOf="@+id/selectedItemsTxt"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:layout_marginEnd="@dimen/normal_margin"
+         android:text="Total : ₹1,710"
+         android:textColor="@color/base_theme"
+         android:fontFamily="@font/poppins_bold"
+         app:layout_constraintTop_toTopOf="@+id/selectedItemsTxt"
+         app:layout_constraintBottom_toBottomOf="@id/selectedItemsTxt"/>
+
+     <Button
+         android:id="@+id/complete_button"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:text="@string/checkout"
+         android:textAllCaps="false"
+         android:textSize="14sp"
+         android:layout_marginEnd="@dimen/normal_margin"
+         android:layout_marginStart="@dimen/normal_margin"
+         android:layout_marginTop="10dp"
+         android:textColor="@color/white"
+         android:layout_marginBottom="10dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:background="@drawable/rounded_btn"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/selectedItemsTxt"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".entryStructure.LoginFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        android:minHeight="29dp"
+        android:src="@drawable/rozaana_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logIn"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/nameInputLayout"
+        android:layout_marginTop="@dimen/large_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameInput"
+            android:hint="@string/emailMobileText"
+            android:drawablePadding="14dp"
+            android:textSize="@dimen/normal_text"
+            android:fontFamily="@font/poppins"
+            android:text="sahil@gmail.com"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_color"
+            android:drawableStart="@drawable/ic_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/passwordInputLayout"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInput"
+            android:hint="@string/password"
+            android:drawablePadding="14dp"
+            android:textSize="@dimen/normal_text"
+            android:text="123456781"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:textColorHint="@color/hint_color"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <CheckBox
+        android:id="@+id/rememberCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tint="@color/black"
+        android:visibility="gone"
+        android:buttonTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginStart="@dimen/normal_margin" />
+
+    <TextView
+        android:id="@+id/rememberText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text"
+        android:visibility="gone"
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/rememberCheckbox"
+        app:layout_constraintTop_toTopOf="@id/rememberCheckbox"
+        app:layout_constraintBottom_toBottomOf="@id/rememberCheckbox"
+        android:text="@string/rememberMe" />
+
+    <TextView
+        android:id="@+id/forgotText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@id/passwordInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/forgetPassword"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:fontFamily="@font/poppins"
+        android:textSize="@dimen/small_text"
+        android:textStyle="bold"
+        android:textColor="@color/base_theme"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBtn"
+        android:text="@string/logIn"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/large_margin"
+
+        android:fontFamily="@font/poppins"
+        android:textStyle="bold"
+        android:textSize="@dimen/extra_large_text"
+        android:background="@drawable/round_corners"
+        app:layout_constraintTop_toBottomOf="@+id/forgotText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="36dp"/>
+
+    <TextView
+        android:id="@+id/firstTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="@string/firstTime"
+        android:textColor="@color/black"
+        android:textSize="@dimen/normal_text"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintEnd_toStartOf="@+id/signupText"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn" />
+
+    <TextView
+        android:id="@+id/signupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintStart_toEndOf="@+id/firstTimeText"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/signUp"
+        android:textSize="@dimen/normal_text"
+        android:textStyle="bold"
+        android:textColor="@color/base_theme"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

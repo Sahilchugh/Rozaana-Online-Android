@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_home"
+            android:title="@string/dashboard" />
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_category"
+            android:title="@string/shop_by_category" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_orders"
+            android:title="@string/my_orders" />
+
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_cart"
+            android:title="@string/my_cart" />
+
+        <item
+            android:id="@+id/nav_offer"
+            android:icon="@drawable/ic_offers"
+            android:title="@string/offers" />
+
+        <item
+            android:id="@+id/nav_refer"
+            android:icon="@drawable/ic_refer"
+            android:title="@string/refer_a_friend" />
+
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_account"
+            android:title="@string/my_account" />
+
+        <item
+            android:id="@+id/nav_manage_address"
+            android:icon="@drawable/ic_address_pin"
+            android:title="@string/your_address" />
+
+        <item
+            android:id="@+id/nav_my_wallet"
+            android:icon="@drawable/ic_red_rupee"
+            android:title="@string/my_wallet" />
+    </group>
+</menu>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".homeStructure.SendMoneyFragment">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send_money_to_mobile_no"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mobileNumTxt"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enterMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:inputType="numberDecimal"
+            android:hint="@string/enter_phone_number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/applyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apply"
+        android:layout_marginBottom="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:textStyle="bold"
+        android:textSize="@dimen/small_text"
+        android:textColor="@color/base_theme"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintBottom_toBottomOf="@id/mobileNumTxt"
+        app:layout_constraintTop_toTopOf="@id/mobileNumTxt"
+        app:layout_constraintEnd_toEndOf="@+id/mobileNumTxt"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtAmount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintTop_toBottomOf="@+id/mobileNumTxt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enterAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold"
+            android:hint="₹ Amount"
+            android:textColor="@color/base_theme"
+            android:textColorHint="@color/base_theme"
+            android:fontFamily="@font/poppins"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/heading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/roz_aana_balance"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/normal_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAmount"/>
+
+    <TextView
+        android:id="@+id/availableBalanceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:textSize="12sp"
+        android:text="Available Balance "
+        android:layout_marginStart="@dimen/normal_margin"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading2"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹18.81"
+        android:layout_marginStart="2dp"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/base_theme"
+        app:layout_constraintBottom_toBottomOf="@id/availableBalanceTxt"
+        app:layout_constraintTop_toTopOf="@+id/availableBalanceTxt"
+        app:layout_constraintStart_toEndOf="@+id/availableBalanceTxt"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_rozana_wallet"
+        app:layout_constraintTop_toTopOf="@+id/heading2"
+        app:layout_constraintBottom_toBottomOf="@+id/availableBalanceTxt"/>
+
+    <Button
+        android:id="@+id/payBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay"
+        android:minHeight="41dp"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_btn"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="@dimen/large_margin"
+        app:layout_constraintTop_toBottomOf="@+id/availableBalanceTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginEnd="@dimen/normal_margin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
